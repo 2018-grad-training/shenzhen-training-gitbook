@@ -5,11 +5,8 @@
     * [Javascript OO](javascript/oo.md)
     * [Tasking](javascript/tasking.md)
     * [Javascript TDD](javascript/tdd.md)
+    * [HTML+CSS](javascript/htmlcss.md)
 
-* [HTML+CSS](htmlcss/README.md)
-    * [HTML](javascript/html.md)
-    * [CSS](javascript/css.md)
-    
 * [React](react/README.md)
     * [React核心概念](react/concept.md)
     * [React基础练习 Todo List](react/exercise.md)

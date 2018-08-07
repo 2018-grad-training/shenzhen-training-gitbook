@@ -1,1 +1,3 @@
 # Javascript
+
+![2018年应届生入职后培训课程设计-Week1](/images/week1.png)

@@ -3,8 +3,10 @@
 * [Javascript](javascript/README.md)
     * [Javascript基础](javascript/foundation.md)
     * [Javascript OO](javascript/oo.md)
-    * [Tasking](javascript/tasking.md)
-    * [Javascript TDD](javascript/tdd.md)
+    * [Tasking](javascript/tasking/README.md)
+        * [Tasking Presentation](javascript/tasking/presentation.md)
+    * [Javascript TDD](javascript/tdd/README.md)
+        * [培训过程](javascript/tdd/training-process.md)
     * [HTML+CSS](javascript/htmlcss.md)
 
 * [React](react/README.md)

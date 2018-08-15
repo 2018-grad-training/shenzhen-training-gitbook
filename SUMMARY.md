@@ -1,7 +1,8 @@
 # 前端
 
 * [Week1*](week1/README.md)
-    * [Javascript基础](week1/foundation.md)
+    * [Javascript基础](week1/foundation/README.md)
+        * [课件](week1/foundation/courseware.md)
     * [Javascript OO](week1/oo.md)
     * [Tasking](week1/tasking.md)
     * [Javascript TDD](week1/tdd.md)

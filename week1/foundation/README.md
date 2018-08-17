@@ -1,16 +1,16 @@
 #### 语言知识点：
-1. Javascript引言
+1. [Javascript引言](./courseware.md/#Javascript引言)
     - 什么是JavaScript？
     - 为什么使用JavaScript？
     - JavaScript 和 ECMAScript 规范
     - Javascript运行环境
-2. Javascript语法
+2. [Javascript语法](./courseware.md/#Javascript语法)
     - 变量声明
     - 注释
     - 日志和调试
-3. Javascript语法和类型
+3. [Javascript语法和类型](./courseware.md/#Javascript语法和类型)
     - 原型数据类型
-    - 对象类型
+    - 内置对象类型
         - Object
         - Array
         - String对象
@@ -18,10 +18,10 @@
         - Boolean对象
     - 强制转换
         - Falsy值
-4. 分支和循环
+4. [分支和循环](./courseware.md/#分支和循环)
     - 分支
     - 循环
-5. 函数
+5. [函数](./courseware.md/#函数)
     - 函数定义
     - 函数调用
         - 方法调用模式
@@ -33,10 +33,10 @@
     - 闭包
         - 闭包的定义
         - 闭包的用途
-6. Promise
+6. [Promise](./courseware.md/#Promise)
     - 回调
     - Promise
-7. node.js模块
+7. [NodeJS模块](./courseware.md/#NodeJS模块)
     - npm新建工程
     - npm工程介绍
     - 模块import和export

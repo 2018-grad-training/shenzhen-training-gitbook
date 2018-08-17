@@ -66,7 +66,7 @@ Javascript中值是有类型的，变量是没有类型的。在静态语言中�
 
 在ECMAScript 6中新添加类型Symbol，也是一种原型数据类型，它的实例是唯一且不可改变的。
 
-### 对象类型 
+### 内置对象类型 
 Javascript中除了原型数据类型，其他所有值都是对象。原型数据类型是不可变的，Javascript中的对象是可变的键控集合。
 - Function 
 - Object 
@@ -351,7 +351,7 @@ const promise = new Promise(function(resolve, reject) {
 });
 ```
 
-## node.js模块
+## NodeJS模块
 ### npm新建工程
 新建工程:
 ```

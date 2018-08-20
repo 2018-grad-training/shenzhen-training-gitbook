@@ -20,31 +20,28 @@
   * [Angular最佳实践](angular/best-practise.md)
   * [Typescript](angular/typescript.md)
 * [Week3-4\*](week3/README.md)
-
-  * Spring Boot实现 RESTful
+  * [Spring Boot实现 RESTful](week3/spring-bootshi-xian-restful.md)
+    * [课件](week3/spring-bootshi-xian-restful/ke-jian.md)
+  * [测试](week3/ce-shi.md)
+    * [课件](week3/ce-shi/ke-jian.md)
+  * [商城用户下单User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey.md)
     * 课件
-  * 测试
+  * [CI/CD & Pipeline as Code](week3/cicd-and-pipeline-as-code.md)
     * 课件
-  * 商城用户下单User Journey
+  * [Gateway](week3/gateway.md)
     * 课件
-  * CI/CD & Pipeline as Code
+  * [User Authorization - Security](week3/user-authorization-security.md)
     * 课件
-  * Gateway
+  * [DDD和微服务自治](week3/dddhe-wei-fu-wu-zi-zhi.md)
     * 课件
-  * User Authorization - Security
+  * [服务注册和发现](week3/fu-wu-zhu-ce-he-fa-xian.md)
     * 课件
-  * DDD和微服务自治
+  * [服务容错保护](week3/fu-wu-rong-cuo-bao-hu.md)
     * 课件
-  * 服务注册和发现
+  * [契约测试](week3/qi-yue-ce-shi.md)
     * 课件
-  * 服务容错保护
+  * [Config Server](week3/config-server.md)
     * 课件
-  * 契约测试
+  * [Docker](week3/docker.md)
     * 课件
-  * Config Server
-    * 课件
-  * Docker
-    * 课件
-
-
 

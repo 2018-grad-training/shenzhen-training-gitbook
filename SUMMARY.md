@@ -20,6 +20,7 @@
   * [Angular最佳实践](angular/best-practise.md)
   * [Typescript](angular/typescript.md)
 * [Week3-4\*](week3/README.md)
+
   * [Spring Boot实现 RESTful](week3/spring-bootshi-xian-restful/README.md)
     * [课件](week3/spring-bootshi-xian-restful/ke-jian.md)
   * 测试
@@ -29,15 +30,25 @@
   * [CI/CD](week3/c-icd/README.md) & Pipeline as Code
     * [课件](week3/c-icd/ke-jian.md)
   * Gateway
+
     * [课件](week3/pipeline-as-code/ke-jian.md)
 
   * User Authorization - Security
+
+    * 课件
+
   * DDD和微服务自治
+    * 课件
   * 服务注册和发现
+    * 课件
   * 服务容错保护
+    * 课件
   * 契约测试
+    * 课件
   * Config Server
+    * 课件
   * Docker
+    * 课件
 
 
 

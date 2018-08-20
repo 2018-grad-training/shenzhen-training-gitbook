@@ -30,13 +30,9 @@
   * [CI/CD](week3/c-icd/README.md) & Pipeline as Code
     * [课件](week3/c-icd/ke-jian.md)
   * Gateway
-
     * [课件](week3/pipeline-as-code/ke-jian.md)
-
   * User Authorization - Security
-
     * 课件
-
   * DDD和微服务自治
     * 课件
   * 服务注册和发现

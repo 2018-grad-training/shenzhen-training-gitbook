@@ -30,9 +30,14 @@
     * [课件](week3/c-icd/ke-jian.md)
   * Gateway
     * [课件](week3/pipeline-as-code/ke-jian.md)
+
   * User Authorization - Security
-    * 课件
-  *  * [课件](week3/user-authorization-security/ke-jian.md)
+  * DDD和微服务自治
+  * 服务注册和发现
+  * 服务容错保护
+  * 契约测试
+  * Config Server
+  * Docker
 
 
 

@@ -40,13 +40,23 @@ HTML（超文本标记语言——HyperText Markup Language）
     <meta name="author" content="Du Juan">
     <meta name="description" content="...">
     <title>My test page</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <p>This is my page</p>
+    <script src="index.js"></script>
   </body>
 </html>
 ``` 
 
-`meta`: 元数据
+`meta`: 元数据。指定包含关于页面内容的关键字可能或让你的页面在搜索引擎的相关的搜索出现得更多(SEO)。
 
-指定包含关于页面内容的关键字可能或让你的页面在搜索引擎的相关的搜索出现得更多(SEO)。
+**练习**：创建一个空页面，包含html文档和css，js文件的引用
+
+### HTML语义
+
+#### 语义化标签的优点：
+- 比`<div>`标签有更加丰富的含义，方便开发与维护
+- 搜索引擎能更方便的识别页面的每个部分
+- 方便其他设备解析（如移动设备、盲人阅读器等）
+

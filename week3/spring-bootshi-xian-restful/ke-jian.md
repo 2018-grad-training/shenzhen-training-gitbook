@@ -26,7 +26,7 @@
 
 ![](/assets/create.png)
 
-1. 导入idea
+  2. 导入idea
 
 
 

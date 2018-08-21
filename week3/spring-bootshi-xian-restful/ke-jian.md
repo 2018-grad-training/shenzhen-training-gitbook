@@ -1,6 +1,4 @@
-# Spring Boot实现RESTful
-
-## 什么是Spring Boot？
+# 什么是Spring Boot？
 
 * SpringBoot帮助开发者快速搭建Spring工程
 
@@ -20,13 +18,17 @@
 
 * Absolutely no code generation and no requirement for XML configuration（不用配置xml）
 
-## 怎么使用Spring Boot？
+## 怎么创建Spring Boot工程？
 
-1. 创建工程：[https://start.spring.io](https://start.spring.io)
+#### 创建工程：[https://start.spring.io](https://start.spring.io)![](/assets/create.png)导入idea：
 
-![](/assets/create.png)
+![](/assets/import.png)
 
-  2. 导入idea
+#### 启动服务：
 
+```bash
+./gradlew bootRun
+```
 
+在浏览器里面访问 [http://localhost:8080](http://localhost:8080)
 

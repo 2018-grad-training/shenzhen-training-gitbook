@@ -6,8 +6,15 @@
 
 * #### Clean
 
+#### ![](/assets/flyway-clean.png)
+
 * #### Migrate
+
+![](/assets/flyway-migrate.png)
+
 * #### Baseline
+
+#### ![](/assets/flyway-baseline.png)
 
 ### Flyway使用
 

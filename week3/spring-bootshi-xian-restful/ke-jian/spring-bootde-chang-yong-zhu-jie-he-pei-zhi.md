@@ -13,9 +13,9 @@
 ```
 buildscript {
 ...
-	dependencies {
-		classpath('org.junit.platform:junit-platform-gradle-plugin:1.0.0')
-	}
+    dependencies {
+        classpath('org.junit.platform:junit-platform-gradle-plugin:1.0.0')
+    }
 }
 
 ...
@@ -28,8 +28,8 @@ dependencies {
 ...
     testCompile('org.junit.jupiter:junit-jupiter-api:5.0.0')
     testRuntime('org.junit.jupiter:junit-jupiter-engine:5.0.0')
+...
 }
-
 ```
 
 ```java
@@ -52,7 +52,6 @@ public class DemoHelloWorldIntegrationTest {
 ```
 
 ```
-
     @GetMapping("/index")
     private String welcome() {
         return "welcome";

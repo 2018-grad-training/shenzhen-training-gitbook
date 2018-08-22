@@ -1,13 +1,4 @@
-####  SpringBootApplication注解
+#### TDD\(Test-driven Development\)
 
-```java
-@SpringBootApplication
-public class DemoApplication {
-    public static void main(String[]args) {
-        SpringApplication.run(DemoApplication.class,args);
-    }
-}
-```
 
-加上SpringBootApplication注解使得你的工程能够自动注入bean
 

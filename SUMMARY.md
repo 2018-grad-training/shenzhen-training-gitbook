@@ -23,7 +23,7 @@
   * [Spring Boot实现 RESTful](week3/spring-bootshi-xian-restful/README.md)
     * [Spring Framework相关概念](week3/spring-bootshi-xian-restful/spring-framework.md)
     * [Spring Boot简介](week3/spring-bootshi-xian-restful/ke-jian.md)
-    * [Spring Boot常用](week3/spring-bootshi-xian-restful/ke-jian/spring-bootde-chang-yong-zhu-jie-he-pei-zhi.md)
+    * [Spring Boot第一个API](week3/spring-bootshi-xian-restful/ke-jian/spring-bootde-chang-yong-zhu-jie-he-pei-zhi.md)
   * [测试](week3/ce-shi/README.md)
     * [课件](week3/ce-shi/ke-jian.md)
   * [商城用户下单User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey/README.md)

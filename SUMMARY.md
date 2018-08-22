@@ -26,6 +26,7 @@
     * [Spring Boot简介](week3/spring-bootshi-xian-restful/ke-jian.md)
     * [Spring Boot第一个API](week3/spring-bootshi-xian-restful/ke-jian/spring-bootde-chang-yong-zhu-jie-he-pei-zhi.md)
     * [Flyway](week3/spring-bootshi-xian-restful/flyway.md)
+    * [Spring Data JPA](week3/spring-bootshi-xian-restful/spring-jpa.md)
   * [测试](week3/ce-shi/README.md)
     * [课件](week3/ce-shi/ke-jian.md)
   * [商城用户下单User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey/README.md)

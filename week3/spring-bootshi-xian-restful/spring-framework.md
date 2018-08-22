@@ -1,6 +1,6 @@
 # Spring 工作原理
 
-![](/assets/spring_high_level.png)
+![](/assets/spring_high_level.png)x
 
 # Configuration Metadata
 
@@ -106,7 +106,6 @@ public class SimpleMovieLister {
 
     // ...
 }
-
 ```
 
 ### Java Code的方式
@@ -149,7 +148,7 @@ public class SimpleMovieLister {
 
     @Authwired
     private MovieFinder movieFinder;
-    
+
     public void setMovieFinder(MovieFinder movieFinder) {
         this.movieFinder = movieFinder;
     }

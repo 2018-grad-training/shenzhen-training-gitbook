@@ -8,10 +8,35 @@
 
 #### 实践演示
 
+##### 添加Junit5依赖
+
+```
+buildscript {
+...
+	dependencies {
+		classpath('org.junit.platform:junit-platform-gradle-plugin:1.0.0')
+	}
+}
+
+...
+
+apply plugin: 'org.junit.platform.gradle.plugin'
+
+...
+
+dependencies {
+...
+    testCompile('org.junit.jupiter:junit-jupiter-api:5.0.0')
+    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.0.0')
+}
+
+```
+
 ```java
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class DemoHelloWorldTest {
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class DemoHelloWorldIntegrationTest {
+
     @Autowired
     private TestRestTemplate restTemplate;
 
@@ -27,8 +52,6 @@ public class DemoHelloWorldTest {
 ```
 
 ```
-@RestController
-public class DemoHelloWorldController {
 
     @GetMapping("/index")
     private String welcome() {

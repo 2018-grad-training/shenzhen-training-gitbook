@@ -16,3 +16,6 @@
 ### 作业
 http://wrapbootstrap.com/preview/WB0265951
 
+### 练习
+1. [HTML练习](https://github.com/2018-grad-training/tw-resume-htmlcss-base)
+2. [CSS练习](https://github.com/2018-grad-training/tw-resume-htmlcss-base/tree/css)

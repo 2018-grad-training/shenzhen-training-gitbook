@@ -121,7 +121,7 @@ GET http://example.com/app/users
             "href": "http://example.com/app/users/2"
         },{
             "rel": "allOrders"
-            "href": "http://example.com/app/users/1/orders"
+            "href": "http://example.com/app/users/2/orders"
         } ]    
     }],
     "links": [ {

@@ -1,10 +1,10 @@
-REST
+### REST
 
 Representational State Transfer，表述性状态转移。REST是一组架构约束条件和原则。
 
-**REST成熟度模型**
+### **REST成熟度模型**
 
-**第0级：使用HTTP作为传输方式；一个URI，一个HTTP方法**
+#### **第0级：使用HTTP作为传输方式；一个URI，一个HTTP方法**
 
 ```bash
 POST /InStock HTTP/1.1
@@ -45,7 +45,7 @@ soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
 </soap:Envelope>
 ```
 
-**第1级：引入了资源的概念，每个资源有对应的标识符和表达；多个URI，一个HTTP方法**
+#### **第1级：引入了资源的概念，每个资源有对应的标识符和表达；多个URI，一个HTTP方法**
 
 ```
 GET http://example.com/app/createUser
@@ -54,7 +54,9 @@ GET http://example.com/app/changeUser?id=123&field=value
 GET http://example.com/app/deleteUser?id=123
 ```
 
-**第2级：根据语义使用HTTP动词，适当处理HTTP响应状态码；多个URI，多个HTTP方法**
+#### **第2级：根据语义使用HTTP动词，适当处理HTTP响应状态码；多个URI，多个HTTP方法**
+
+##### HTTP方法
 
 POST（CREATE）：在服务器新建一个资源。
 
@@ -85,9 +87,9 @@ PUT http://example.com/app/users/123
 DELETE http://example.com/app/users/123
 ```
 
-常用状态码
+##### 常用状态码
 
-| HTTP Code | Message | Description |
+| HTTP code | Message | Description |
 | :--- | :--- | :--- |
 | 200 | OK | 成功 |
 | 201 | Created | 创建成功 |
@@ -98,7 +100,7 @@ DELETE http://example.com/app/users/123
 | 404 | Not Found | 没有找到 |
 | 500 | Server Error | 服务器端错误 |
 
-第3级：使用超媒体作为应用状态引擎（HATEOAS）；多个URI，多个HTTP方法
+#### **第3级：使用超媒体作为应用状态引擎（HATEOAS）；多个URI，多个HTTP方法**
 
 ```
 GET http://example.com/app/users

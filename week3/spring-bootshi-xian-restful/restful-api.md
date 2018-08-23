@@ -52,7 +52,6 @@ GET http://example.com/app/createUser
 GET http://example.com/app/getUser?id=123
 GET http://example.com/app/changeUser?id=123&field=value
 GET http://example.com/app/deleteUser?id=123
-
 ```
 
 **第2级：根据语义使用HTTP动词，适当处理HTTP响应状态码；多个URI，多个HTTP方法**
@@ -77,8 +76,14 @@ DELETE http://example.com/app/users/123
 | HTTP Code | Message | Description |
 | :--- | :--- | :--- |
 | 200 | OK | 成功 |
+| 201 | Created | 创建成功 |
+| 204 | No Content | 成功且没有返回内容 |
+| 400 | Bad Request | 请求URL存在，但是request有问题，比如缺少参数，参数不合法，参数错误 |
+| 401 | Unauthorized | 用户认证失败 |
+| 403 | Forbidden | 没有权限查看／操作 |
+| 404 | Not Found | 没有找到 |
+| 500 | Server Error | 服务器端错误 |
 
 **第3级：使用超媒体作为应用状态引擎（HATEOAS）；多个URI，多个HTTP方法**  
-特别注意，这里是超媒体（hypermedia），超媒体概念是包括超文本的。  
 我们已经知道什么是多媒体（multimedia），以及什么是超文本（hypertext）。其中超文本特有的优势是拥有超链接（hyperlink）。如果我们把超链接引入到多媒体当中去，那就得到了超媒体，因此关键角色还是超链接。使用超媒体作为应用引擎状态，意思是应用引擎的状态变更由客户端访问不同的超媒体资源驱动。
 

@@ -1,26 +1,26 @@
 ### Spring Data JPA介绍
 
-主要概念
-
+```java
+@Table(name = "companies")
 @Entity
+public class Company {
 
-@Table
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id")
+    private Long id;
 
-@Id
+    @Column(name = "code")
+    private String code;
 
-@Column
-
-@Transient
-
-@Cascade
-
-@Transactional
+    @Column(name = "name")
+    private String name;
+}
+```
 
 ### JpaRepository
 
-| Keyword | Sample |  |
-| :--- | :--- | :--- |
-|  |  |  |
+![](/assets/jpa_keyword.png)
 
 ### 练习
 

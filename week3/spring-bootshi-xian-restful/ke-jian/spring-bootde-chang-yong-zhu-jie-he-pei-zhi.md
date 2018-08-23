@@ -8,29 +8,7 @@
 
 #### 实践演示
 
-##### 添加Junit5依赖
-
-```
-buildscript {
-...
-    dependencies {
-        classpath('org.junit.platform:junit-platform-gradle-plugin:1.0.0')
-    }
-}
-
-...
-
-apply plugin: 'org.junit.platform.gradle.plugin'
-
-...
-
-dependencies {
-...
-    testCompile('org.junit.jupiter:junit-jupiter-api:5.0.0')
-    testRuntime('org.junit.jupiter:junit-jupiter-engine:5.0.0')
-...
-}
-```
+##### Hello world！
 
 ```java
 @ExtendWith(SpringExtension.class)
@@ -45,16 +23,17 @@ public class DemoHelloWorldIntegrationTest {
         ResponseEntity<String> response = restTemplate.getForEntity("/index", String.class);
 
         assertThat(response.getStatusCode(), is(HttpStatus.OK));
-        assertThat(response.getBody(), is("welcome"));
+        assertThat(response.getBody(), is("Hello world"));
     }
 
 }
 ```
 
-```
+```java
+{
     @GetMapping("/index")
     private String welcome() {
-        return "welcome";
+        return "Hello world";
     }
 
 }

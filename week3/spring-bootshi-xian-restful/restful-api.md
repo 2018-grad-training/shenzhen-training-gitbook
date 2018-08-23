@@ -1,0 +1,84 @@
+REST
+
+Representational State Transfer，表述性状态转移。REST是一组架构约束条件和原则。
+
+**REST成熟度模型**
+
+**第0级：使用HTTP作为传输方式；一个URI，一个HTTP方法**
+
+```bash
+POST /InStock HTTP/1.1
+Host: www.example.org
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+<soap:Body xmlns:m="http://www.example.org/stock">
+  <m:GetStockPrice>
+    <m:StockName>IBM</m:StockName>
+  </m:GetStockPrice>
+</soap:Body>
+
+</soap:Envelope>
+```
+
+```bash
+HTTP/1.1 200 OK
+Content-Type: application/soap+xml; charset=utf-8
+Content-Length: nnn
+
+<?xml version="1.0"?>
+<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+<soap:Body xmlns:m="http://www.example.org/stock">
+  <m:GetStockPriceResponse>
+    <m:Price>34.5</m:Price>
+  </m:GetStockPriceResponse>
+</soap:Body>
+
+</soap:Envelope>
+```
+
+**第1级：引入了资源的概念，每个资源有对应的标识符和表达；多个URI，一个HTTP方法**
+
+```
+GET http://example.com/app/createUser
+GET http://example.com/app/getUser?id=123
+GET http://example.com/app/changeUser?id=123&field=value
+GET http://example.com/app/deleteUser?id=123
+
+```
+
+**第2级：根据语义使用HTTP动词，适当处理HTTP响应状态码；多个URI，多个HTTP方法**
+
+POST（CREATE）：在服务器新建一个资源。
+
+GET（READ）：从服务器取出资源（一项或多项）。
+
+PUT（UPDATE）：在服务器更新资源。
+
+DELETE（DELETE）：从服务器删除资源。
+
+```
+POST http://example.com/app/users
+GET http://example.com/app/users/123
+PUT http://example.com/app/users/123
+DELETE http://example.com/app/users/123
+```
+
+常用状态码
+
+| HTTP Code | Message | Description |
+| :--- | :--- | :--- |
+| 200 | OK | 成功 |
+
+**第3级：使用超媒体作为应用状态引擎（HATEOAS）；多个URI，多个HTTP方法**  
+特别注意，这里是超媒体（hypermedia），超媒体概念是包括超文本的。  
+我们已经知道什么是多媒体（multimedia），以及什么是超文本（hypertext）。其中超文本特有的优势是拥有超链接（hyperlink）。如果我们把超链接引入到多媒体当中去，那就得到了超媒体，因此关键角色还是超链接。使用超媒体作为应用引擎状态，意思是应用引擎的状态变更由客户端访问不同的超媒体资源驱动。
+

@@ -28,11 +28,12 @@
 * [Week3-4\*](week3/README.md)
   * [Spring Boot实现 RESTful](week3/spring-bootshi-xian-restful/README.md)
     * [Gradle](week3/spring-bootshi-xian-restful/gradle.md)
-    * [Spring Framework相关概念](week3/spring-bootshi-xian-restful/spring-framework.md)
-    * [Spring Boot简介](week3/spring-bootshi-xian-restful/ke-jian.md)
     * [Spring Boot第一个API](week3/spring-bootshi-xian-restful/ke-jian/spring-bootde-chang-yong-zhu-jie-he-pei-zhi.md)
-    * [Flyway](week3/spring-bootshi-xian-restful/flyway.md)
+    * [Spring Boot简介](week3/spring-bootshi-xian-restful/ke-jian.md)
+    * [RESTful API](week3/spring-bootshi-xian-restful/restful-api.md)
     * [Spring Data JPA](week3/spring-bootshi-xian-restful/spring-jpa.md)
+    * [Flyway](week3/spring-bootshi-xian-restful/flyway.md)
+    * [Spring MVC](week3/spring-bootshi-xian-restful/spring-framework.md)
   * [测试](week3/ce-shi/README.md)
     * [课件](week3/ce-shi/ke-jian.md)
   * [商城用户下单User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey/README.md)
@@ -48,8 +49,6 @@
   * [服务注册和发现](week3/fu-wu-zhu-ce-he-fa-xian.md)
     * 课件
   * [服务容错保护](week3/fu-wu-rong-cuo-bao-hu.md)
-    * 课件
-  * [契约测试](week3/qi-yue-ce-shi.md)
     * 课件
   * [Config Server](week3/config-server.md)
     * 课件

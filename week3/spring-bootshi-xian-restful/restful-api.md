@@ -133,12 +133,11 @@ GET http://example.com/app/users
 
 ### 练习
 
-* 查看所有Todo List集合
-* 添加Todo List
-* 删除Todo List
-* 在某个Todo List内的查看所有task
-* 在某个Todo List内删除task
-* 在某个Todo List内添加task
+在spring boot项目上添加三个RESTFul API
+
+* 查看所有task集合
+* 添加task
+* 删除task
 
 
 

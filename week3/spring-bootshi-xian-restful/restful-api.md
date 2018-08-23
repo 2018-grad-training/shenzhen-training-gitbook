@@ -66,8 +66,22 @@ DELETE（DELETE）：从服务器删除资源。
 
 ```
 POST http://example.com/app/users
+{ 
+    "name" : "Alice"
+}
+
 GET http://example.com/app/users/123
+{ 
+    "id" : "123"
+    "name" : "Alice"
+}
+
 PUT http://example.com/app/users/123
+{ 
+    "id" : "123"
+    "name" : "Alice1"
+}
+
 DELETE http://example.com/app/users/123
 ```
 
@@ -84,6 +98,36 @@ DELETE http://example.com/app/users/123
 | 404 | Not Found | 没有找到 |
 | 500 | Server Error | 服务器端错误 |
 
-**第3级：使用超媒体作为应用状态引擎（HATEOAS）；多个URI，多个HTTP方法**  
-我们已经知道什么是多媒体（multimedia），以及什么是超文本（hypertext）。其中超文本特有的优势是拥有超链接（hyperlink）。如果我们把超链接引入到多媒体当中去，那就得到了超媒体，因此关键角色还是超链接。使用超媒体作为应用引擎状态，意思是应用引擎的状态变更由客户端访问不同的超媒体资源驱动。
+第3级：使用超媒体作为应用状态引擎（HATEOAS）；多个URI，多个HTTP方法
+
+```
+GET http://example.com/app/users
+{
+    "content": [ {
+        "name": "Alice",
+        "links": [ {
+            "rel": "self",
+            "href": "http://example.com/app/users/1"
+            }, {
+            "rel": "allOrders"
+            "href": "http://example.com/app/users/1/orders"
+        } ]
+    },{
+        "name": "Bob",
+        "links": [ {
+            "rel": "self",
+            "href": "http://example.com/app/users/2"
+        },{
+            "rel": "allOrders"
+            "href": "http://example.com/app/users/1/orders"
+        } ]    
+    }],
+    "links": [ {
+        "rel": "self",
+        "href": "http://example.com/app/users"
+    } ]
+}
+```
+
+
 

@@ -22,3 +22,7 @@
 
 [https://flywaydb.org/documentation/plugins/springboot](https://flywaydb.org/documentation/plugins/springboot)
 
+### 练习
+
+添加flyway依赖
+

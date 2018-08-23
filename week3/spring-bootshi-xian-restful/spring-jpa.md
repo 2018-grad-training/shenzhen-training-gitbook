@@ -20,7 +20,7 @@ public class Company {
 
 ### JpaRepository
 
-![](/assets/jpa_keyword.png)
+[https://docs.spring.io/spring-data/jpa/docs/1.9.1.RELEASE/reference/html/\#jpa.query-methods.query-creation](https://docs.spring.io/spring-data/jpa/docs/1.9.1.RELEASE/reference/html/#jpa.query-methods.query-creation)![](/assets/jpa_keyword.png)[https://docs.spring.io/spring-data/jpa/docs/1.9.1.RELEASE/reference/html/\#jpa.query-methods.query-creation](https://docs.spring.io/spring-data/jpa/docs/1.9.1.RELEASE/reference/html/#jpa.query-methods.query-creation)
 
 ### 练习
 

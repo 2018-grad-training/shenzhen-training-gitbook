@@ -45,13 +45,14 @@
     * [使用Docker启动Jenkins](week3/cicd-and-pipeline-as-code/jenkinsshi-yong.md)
     * [Jenkins file](week3/cicd-and-pipeline-as-code/jenkins-file.md)
   * [API Gateway](week3/gateway/README.md)
-    * [课件](week3/gateway/ke-jian.md)
+    * [Zuul](week3/gateway/ke-jian.md)
   * [User Authorization - Security](week3/user-authorization-security.md)
     * [Spring Security](week3/user-authorization-security/ke-jian.md)
   * [DDD和微服务自治](week3/dddhe-wei-fu-wu-zi-zhi/README.md)
-    * 课件
+    * [DDD](week3/dddhe-wei-fu-wu-zi-zhi/ke-jian.md)
+    * 微服务自治
   * [服务注册和发现](week3/fu-wu-zhu-ce-he-fa-xian.md)
-    * 课件
+    * [Eureka](week3/fu-wu-zhu-ce-he-fa-xian/ke-jian.md)
   * [服务容错保护](week3/fu-wu-rong-cuo-bao-hu.md)
     * 课件
   * [Config Server](week3/config-server.md)

@@ -38,13 +38,16 @@
   * [测试](week3/ce-shi/README.md)
     * [课件](week3/ce-shi/ke-jian.md)
   * [商城用户下单User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey/README.md)
-    * 课件
+    * [Tasking](week3/shang-cheng-yong-hu-xia-dan-user-journey/ke-jian.md)
+    * [User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey/user-journey.md)
   * [CI/CD & Pipeline as Code](week3/cicd-and-pipeline-as-code/README.md)
-    * 课件
-  * [Gateway](week3/gateway/README.md)
-    * 课件
+    * [CI/CD概念](week3/cicd-and-pipeline-as-code/ke-jian.md)
+    * [使用Docker启动Jenkins](week3/cicd-and-pipeline-as-code/jenkinsshi-yong.md)
+    * [Jenkins file](week3/cicd-and-pipeline-as-code/jenkins-file.md)
+  * [API Gateway](week3/gateway/README.md)
+    * [课件](week3/gateway/ke-jian.md)
   * [User Authorization - Security](week3/user-authorization-security.md)
-    * 课件
+    * [Spring Security](week3/user-authorization-security/ke-jian.md)
   * [DDD和微服务自治](week3/dddhe-wei-fu-wu-zi-zhi/README.md)
     * 课件
   * [服务注册和发现](week3/fu-wu-zhu-ce-he-fa-xian.md)

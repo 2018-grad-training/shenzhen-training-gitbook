@@ -1,0 +1,6 @@
+- [Angular路由](./courseware.md/#Angular路由)
+- [路由注册](./courseware.md/#路由注册)
+- [路由访问](./courseware.md/#路由访问)
+- [特性模块路由](./courseware.md/#特性模块路由)
+- [惰性加载](./courseware.md/#惰性加载)
+- [预加载](./courseware.md/#预加载)

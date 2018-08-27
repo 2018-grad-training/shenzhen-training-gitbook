@@ -1,6 +1,6 @@
 ### 测试金字塔
 
-![](/assets/test-pyramid.png)
+![](/assets/test.png)
 
 单元测试
 

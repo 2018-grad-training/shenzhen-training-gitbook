@@ -42,7 +42,7 @@
     * [User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey/user-journey.md)
   * [CI/CD & Pipeline as Code](week3/cicd-and-pipeline-as-code/README.md)
     * [CI/CD概念](week3/cicd-and-pipeline-as-code/ke-jian.md)
-    * [使用Docker启动Jenkins](week3/cicd-and-pipeline-as-code/jenkinsshi-yong.md)
+    * [Jenkins使用](week3/cicd-and-pipeline-as-code/jenkinsshi-yong.md)
     * [Jenkins file](week3/cicd-and-pipeline-as-code/jenkins-file.md)
   * [API Gateway](week3/gateway/README.md)
     * [Zuul](week3/gateway/ke-jian.md)

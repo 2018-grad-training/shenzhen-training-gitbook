@@ -2,7 +2,92 @@
 
 ![](/assets/test.png)
 
-单元测试
+单元测试 - 
+
+mockMvc
+
+```java
+@RunWith(SpringRunner.class)
+@WebMvcTest(TaskController.class)
+public class TaskControllerTest {
+    @Autowired
+    private MockMvc mockMvc;
+
+    @MockBean
+    private TaskService taskService;
+
+    @Test
+    public void should_get_all_tasks_by_getAllTask() throws Exception {
+        given(taskService.getTasks()).willReturn(Lists.newArrayList(createTask("test"), createTask("aaa")));
+        mockMvc.perform(MockMvcRequestBuilders.get("/tasks"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$[0].name").value("test"))
+                .andExpect(jsonPath("$[1].name").value("aaa"));
+    }
+
+    public Task createTask(String name) {
+        Task task = new Task();
+        task.setName(name);
+        return task;
+    }
+}
+```
+
+Mockito
+
+```java
+@RunWith(MockitoJUnitRunner.class)
+public class TaskServiceTest {
+
+    @InjectMocks
+    private TaskService taskService;
+
+    @Mock
+    private TaskRepository taskRepository;
+
+    @Test
+    public void should_return_all_tasks_when_getAllTasks() {
+        given(taskRepository.findAll()).willReturn(Lists.newArrayList(createTask("test"), createTask("aaa")));
+        List<Task> tasks = taskService.getTasks();
+
+        assertThat(tasks.size(), is(2));
+        assertThat(tasks.get(0).getName(), is("test"));
+        assertThat(tasks.get(1).getName(), is("aaa"));
+    }
+
+    public Task createTask(String name) {
+        Task task = new Task();
+        task.setName(name);
+        return task;
+    }
+}
+
+```
+
+DataJpaTest
+
+```java
+@RunWith(SpringRunner.class)
+@DataJpaTest
+@AutoConfigureTestDatabase(replace = NONE)
+public class TaskRepositoryTest {
+    @Autowired
+    private TaskRepository taskRepository;
+
+    @Autowired
+    private TestEntityManager entityManager;
+
+    @Test
+    public void get_all_will_return_all_tasks() {
+        List<Task> tasks = taskRepository.findAll();
+        assertThat(tasks.size(), is(2));
+        assertThat(tasks.get(0).getName(), is("test"));
+        assertThat(tasks.get(1).getName(), is("aaa"));
+    }
+
+}
+
+```
 
 集成测试 - TestRestTemplate
 
@@ -26,4 +111,6 @@ public class DemoHelloWorldIntegrationTest {
 ```
 
 契约测试
+
+
 

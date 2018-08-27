@@ -24,12 +24,6 @@
 
 ![](/assets/import.png)
 
-#### 测试
-
-```bash
-./gradlew test
-```
-
 #### 启动服务：
 
 ```bash

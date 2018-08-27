@@ -12,5 +12,3 @@ MVC（Model View Controller）
 
 @RequestParam
 
-Model
-

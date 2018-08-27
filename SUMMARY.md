@@ -52,11 +52,13 @@
     * [DDD](week3/dddhe-wei-fu-wu-zi-zhi/ke-jian.md)
     * 微服务自治
   * [服务注册和发现](week3/fu-wu-zhu-ce-he-fa-xian.md)
-    * [Eureka](week3/fu-wu-zhu-ce-he-fa-xian/ke-jian.md)
+    * [Eureka & Consul](week3/fu-wu-zhu-ce-he-fa-xian/ke-jian.md)
+    * Feign client
   * [服务容错保护](week3/fu-wu-rong-cuo-bao-hu.md)
-    * 课件
+    * 容错保护
+    * Spring Cloud Hytrix
   * [Config Server](week3/config-server.md)
-    * 课件
+    * [Spring Cloud Config Server](week3/config-server/ke-jian.md)
   * [Docker](week3/docker.md)
     * 课件
 

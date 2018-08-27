@@ -1,0 +1,2 @@
+![](/assets/user journey.png)
+

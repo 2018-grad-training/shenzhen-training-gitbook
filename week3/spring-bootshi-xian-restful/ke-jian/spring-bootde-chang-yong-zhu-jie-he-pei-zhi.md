@@ -1,13 +1,43 @@
-####  SpringBootApplication注解
+#### TDD \(Test-driven Development\)
+
+![](/assets/tdd.png)
+
+#### 怎么写测试？
+
+![](/assets/givenWhenThen.png)
+
+#### 实践演示
+
+##### Hello world！
 
 ```java
-@SpringBootApplication
-public class DemoApplication {
-    public static void main(String[]args) {
-        SpringApplication.run(DemoApplication.class,args);
+@ExtendWith(SpringExtension.class)
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+public class DemoHelloWorldIntegrationTest {
+
+    @Autowired
+    private TestRestTemplate restTemplate;
+
+    @Test
+    public void guest_can_get_welcome_message() {
+        ResponseEntity<String> response = restTemplate.getForEntity("/index", String.class);
+
+        assertThat(response.getStatusCode(), is(HttpStatus.OK));
+        assertThat(response.getBody(), is("Hello world"));
     }
+
 }
 ```
 
-加上SpringBootApplication注解使得你的工程能够自动注入bean
+```java
+{
+    @GetMapping("/index")
+    private String welcome() {
+        return "Hello world";
+    }
+
+}
+```
+
+
 

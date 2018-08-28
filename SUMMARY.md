@@ -40,7 +40,6 @@
   * [测试](week3/ce-shi/README.md)
     * [课件](week3/ce-shi/ke-jian.md)
   * [商城用户下单User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey/README.md)
-    * [Tasking](week3/shang-cheng-yong-hu-xia-dan-user-journey/ke-jian.md)
     * [User Journey](week3/shang-cheng-yong-hu-xia-dan-user-journey/user-journey.md)
   * [CI/CD & Pipeline as Code](week3/cicd-and-pipeline-as-code/README.md)
     * [CI/CD概念](week3/cicd-and-pipeline-as-code/ke-jian.md)

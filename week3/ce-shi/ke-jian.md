@@ -179,7 +179,6 @@ import org.springframework.cloud.contract.spec.Contract
             status 200
         }
     }
-
 ]
 ```
 

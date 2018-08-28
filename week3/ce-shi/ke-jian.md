@@ -116,6 +116,10 @@ public class DemoHelloWorldIntegrationTest {
 
 ![](/assets/contract-test.png)
 
+#### 怎么订契约
+
+#### ![](/assets/cdct.png)
+
 #### moco & moscow
 
 [https://github.com/macdao/moscow](https://github.com/macdao/moscow)

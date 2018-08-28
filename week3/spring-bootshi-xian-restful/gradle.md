@@ -1,3 +1,7 @@
+### Gradle作用
+
+gradle自动化构建工具
+
 ### 创建Gradle项目
 
 ```bash

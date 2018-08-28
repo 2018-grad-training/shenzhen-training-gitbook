@@ -2,7 +2,7 @@
 
 ![](/assets/test.png)
 
-单元测试
+### 单元测试
 
 mockMvc
 
@@ -87,7 +87,7 @@ public class TaskRepositoryTest {
 }
 ```
 
-集成测试 - TestRestTemplate
+### 集成测试 - TestRestTemplate
 
 ```java
 @RunWith(SpringRunner.class)
@@ -108,7 +108,13 @@ public class DemoHelloWorldIntegrationTest {
 }
 ```
 
-契约测试![](/assets/contract-test.png)
+### E2E测试
+
+![](/assets/e2e.png)
+
+### 契约测试
+
+![](/assets/contract-test.png)
 
 #### moco & moscow
 

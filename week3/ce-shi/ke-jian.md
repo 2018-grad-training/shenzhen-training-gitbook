@@ -156,5 +156,32 @@ public class DemoHelloWorldIntegrationTest {
 
 #### spring cloud contract
 
+```java
+import org.springframework.cloud.contract.spec.Contract
+
+[
+    Contract.make {
+        name 'create clients by upload files'
+        request {
+            method "POST"
+            url $(c("/auth/clients/import"), p("/clients/import"))
+            headers {
+                contentType('multipart/form-data;boundary=AaB03x')
+            }
+            multipart(
+                file: named(
+                    name: $(c(regex(nonEmpty())), p('clients.csv')),
+                    content: $(c(regex(nonEmpty())), p('1234,小明\n' +    '1235,小红'))
+                )
+            )
+        }
+        response {
+            status 200
+        }
+    }
+
+]
+```
+
 
 

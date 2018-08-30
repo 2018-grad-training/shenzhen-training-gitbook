@@ -51,7 +51,7 @@
     * [Spring Security](week3/user-authorization-security/ke-jian.md)
   * [DDD和微服务自治](week3/dddhe-wei-fu-wu-zi-zhi/README.md)
     * [DDD](week3/dddhe-wei-fu-wu-zi-zhi/ke-jian.md)
-    * 微服务自治
+    * [微服务拆分](week3/dddhe-wei-fu-wu-zi-zhi/wei-fu-wu-zi-zhi.md)
   * [服务注册和发现](week3/fu-wu-zhu-ce-he-fa-xian.md)
     * [Eureka & Consul](week3/fu-wu-zhu-ce-he-fa-xian/ke-jian.md)
     * Feign client

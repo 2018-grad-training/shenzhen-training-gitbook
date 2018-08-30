@@ -2,27 +2,29 @@
 
 ### 什么是JavaScript？
 
-JavaScript 是一门跨平台、面向对象的轻量级脚本语言。
+JavaScript 是一门跨平台、面向对象的轻量级脚本语言，它也是一门动态编程语言。
 
 ### 为什么使用JavaScript？
 
 * 客户端
 * 服务器
 
-### JavaScript 和 ECMAScript 规范
+### JavaScript历史
 
-* 1995年诞生，运行于Netscape Navigator browser中
-* ES3\(1999\)
-* ES4 abandoned
-* ES5\(2009\)
-* ES6/ES2015，ES2016，ES2017，ES2018…
+* 1995年诞生，运行于网景 Navigator2 浏览器中
+* ECMAScript 是下一代 JavaScript 语言
+  * ES3\(1999\)
+  * ES4 abandoned
+  * ES5\(2009\)
+  * ES6/ES2015，ES2016，ES2017，ES2018…
 * TypeScript 是JavaScript的超集
 
 ### Javascript运行环境
 
-* Web控制台 \(Firefox Scratchpad \(Shift+F4\)\)
+* Web控制台
 * node运行环境
-* node工程 \([https://github.com/dujuanxian/training-scaffold](https://github.com/dujuanxian/training-scaffold)\)
+* node工程 https://github.com/2018-grad-training/tw-js-scaffold
+* Javascript在线编辑器 http://jsbin.com/
 
 ## Javascript语法
 
@@ -66,7 +68,7 @@ JavaScript 是一门跨平台、面向对象的轻量级脚本语言。
 
 ## Javascript语法和类型
 
-Javascript中值是有类型的，变量是没有类型的。在静态语言中，变量是有类型的。
+Javascript中值是有类型的，变量是没有类型的。
 
 ### 原型数据类型
 
@@ -75,8 +77,6 @@ Javascript中值是有类型的，变量是没有类型的。在静态语言中�
 * String.  表示字符串，例如："Howdy"
 * null
 * undefined
-
-在ECMAScript 6中新添加类型Symbol，也是一种原型数据类型，它的实例是唯一且不可改变的。
 
 ### 内置对象类型
 
@@ -152,13 +152,7 @@ JS提供的对象方法绑定在prototype上，ES6对prototype方法进行了扩
 * ==
 
 #### Falsy值
-
-* false
-* 0
-* ""
-* null
-* undefined
-* NaN
+false, 0, "", null, undefined, NaN
 
 ## 分支和循环
 
@@ -184,12 +178,27 @@ for...in循环出的是key，for...of循环出的是value。推荐在循环对�
 ### 函数定义
 
 * 函数就是对象，因此可以像任何其他值一样被使用
-* 函数对象链接到Function.prototype
 * 函数是一等公民
   * 函数可以作为参数传给其他函数
   * 函数能够被返回
   * 函数可以保存在变量、对象或数组中
 * 函数可以被调用
+
+### 函数作用域
+
+函数中的参数和变量在函数外部不可见，而在函数内部任何位置定义的变量，在该函数内部都可见。
+
+```javascript
+function diff(x, y) {
+  if (x > y) {
+    var temp = x;
+    x = y;
+    y = temp;
+  }
+  return y - x;
+}
+```
+temp是函数作用域，如果用let声明temp，则具有了块级作用域
 
 ### 函数调用
 
@@ -209,7 +218,7 @@ const myObject = {
 myObject.increment();
 ```
 
-#### 函数调用
+#### 函数调用模式
 
 函数也可以直接被调用，此时this绑定到全局对象。
 
@@ -252,9 +261,9 @@ point.moveTo(1);
 console.log(point.x);
 ```
 
-#### 构造函数调用
+#### 构造函数调用模式
 
-采用new来调用，会创建一个连接到该函数的prototype成员的新对象，同时this会绑定到这个新对象上。
+采用new来调用，会创建一个新对象，同时this会绑定到这个新对象上。
 
 ```javascript
 function Point(x, y){ 
@@ -264,7 +273,7 @@ function Point(x, y){
 new Point(1,2);
 ```
 
-#### 使用apply或call调用
+#### 使用apply或call调用模式
 
 ```javascript
 function Point(x){ 
@@ -280,24 +289,7 @@ p1.moveTo(1);
 p1.moveTo.apply(p2, [10]);
 ```
 
-apply和call允许切换函数执行的上下文环境（context），即this绑定的对象。
-
-### 函数作用域
-
-函数中的参数和变量在函数外部不可见，而在函数内部任何位置定义的变量，在该函数内部都可见。
-
-```javascript
-function diff(x, y) {
-  if (x > y) {
-    var temp = x;
-    x = y;
-    y = temp;
-  }
-  return y - x;
-}
-```
-
-temp是函数作用域，如果用let声明temp，则具有了块级作用域
+apply和call允许切换函数执行的上下文环境，即this绑定的对象。
 
 ### 箭头函数和this
 
@@ -305,14 +297,11 @@ temp是函数作用域，如果用let声明temp，则具有了块级作用域
 
 ```javascript
 function Person() {
-  // The Person() constructor defines `this` as itself.
   this.age = 0;
 
-  setInterval(function growUp() {
-    // In nonstrict mode, the growUp() function defines `this` 
-    // as the global object, which is different from the `this`
-    // defined by the Person() constructor.
+  setTimeout(function growUp() {
     this.age++;
+    console.log(this.age);
   }, 1000);
 }
 
@@ -324,7 +313,7 @@ function Person(){
   this.age = 0;
 
   setInterval(() => {
-    this.age++; // |this| properly refers to the person object
+    this.age++;
   }, 1000);
 }
 
@@ -377,11 +366,10 @@ var digit_name = (function () {
 
 ### 回调
 
-把函数作为参数传入到另一个函数中。这个函数就是所谓的回调函数。JavaScript 的回调是在异步调用场景下使用的，使用回调性能好于轮询。
+把函数作为参数传入到另一个函数中。这个函数就是所谓的回调函数。JavaScript 的回调是在异步调用场景下使用的。
 
 ```javascript
 var func1 = function(callback){  
-    //do something
     callback();  
 }
 ```

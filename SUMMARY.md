@@ -56,8 +56,8 @@
     * [Eureka & Consul](week3/fu-wu-zhu-ce-he-fa-xian/ke-jian.md)
     * [Feign client](week3/fu-wu-zhu-ce-he-fa-xian/feign-client.md)
   * [服务容错保护](week3/fu-wu-rong-cuo-bao-hu.md)
-    * 容错保护
-    * Spring Cloud Hytrix
+    * [容错保护](week3/fu-wu-rong-cuo-bao-hu/rong-cuo-bao-hu.md)
+    * [Spring Cloud Hytrix](week3/fu-wu-rong-cuo-bao-hu/spring-cloud-hytrix.md)
   * [Config Server](week3/config-server.md)
     * [Spring Cloud Config Server](week3/config-server/ke-jian.md)
   * [Docker](week3/docker.md)

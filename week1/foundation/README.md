@@ -33,10 +33,7 @@
     - 闭包
         - 闭包的定义
         - 闭包的用途
-6. [Promise](./courseware.md/#Promise)
-    - 回调
-    - Promise
-7. [NodeJS模块](./courseware.md/#NodeJS模块)
+6. [NodeJS模块](./courseware.md/#NodeJS模块)
     - npm新建工程
     - npm工程介绍
     - 模块import和export

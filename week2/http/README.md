@@ -1,2 +1,2 @@
-- [获取数据](./courseware.md/#获取数据)
-- [发送数据到服务器](./courseware.md/#发送数据到服务器)
+- [异步请求模型](./courseware.md/#异步请求模型)
+- [HttpClient](./courseware.md/#HttpClient)

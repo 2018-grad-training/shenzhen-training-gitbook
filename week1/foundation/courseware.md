@@ -80,6 +80,8 @@ Javascript中值是有类型的，变量是没有类型的。
 
 ### 内置对象类型
 
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
+
 Javascript中除了原型数据类型，其他所有值都是对象。原型数据类型是不可变的，Javascript中的对象是可变的键控集合。
 
 * Function 
@@ -93,16 +95,12 @@ JS提供的对象方法绑定在prototype上，ES6对prototype方法进行了扩
 
 #### Object
 
-[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/Object](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object)
-
 * 检索：obj\[prop\], obj.prop, Object.hasOwnProperty\(\), Object.defineProperty\(\) ...
 * 构造：Object.create\(\), Object.assign\(\)
 * 枚举：for in
 * 遍历：Object.keys\(\), Object.values\(\), Object.entries\(\)
 
 #### Array
-
-[https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global\_Objects/Array](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
 
 * 构造：Array.from\(\), Array.of\(\)
 * 遍历：Array.map\(\), Array.forEach\(\), Array.filter\(\), Array.reduce\(\), Array.find\(\) ...
@@ -230,37 +228,6 @@ makeNoSense(5);
 console.log(x);
 ```
 
-声明在另外一个函数体内的函数，这种绑定到全局对象的方式会产生问题。
-
-```javascript
-const point = { 
-  x: 0, 
-  moveTo : function(x) { 
-    const moveX = function(x) { 
-      this.x = x;
-    }; 
-    moveX(x); 
-  } 
-}; 
-point.moveTo(1);
-console.log(point.x, x);
-```
-
-```javascript
-const point = { 
-  x: 0, 
-  moveTo : function(x) {
-    const that = this;
-    const moveX = function(x) { 
-      that.x = x;
-    }; 
-    moveX(x); 
-  } 
-}; 
-point.moveTo(1);
-console.log(point.x);
-```
-
 #### 构造函数调用模式
 
 采用new来调用，会创建一个新对象，同时this会绑定到这个新对象上。
@@ -360,33 +327,6 @@ var digit_name = (function () {
         return names[n];
     };
 }());
-```
-
-## Promise
-
-### 回调
-
-把函数作为参数传入到另一个函数中。这个函数就是所谓的回调函数。JavaScript 的回调是在异步调用场景下使用的。
-
-```javascript
-var func1 = function(callback){  
-    callback();  
-}
-```
-
-### Promise
-
-Promise，简单说就是一个容器，里面保存着某个未来才会结束的事件（通常是一个异步操作）的结果。  
-Promise对象代表一个异步操作，有三种状态：pending（进行中）、fulfilled（已成功）和rejected（已失败）。
-
-```javascript
-const promise = new Promise(function(resolve, reject) {
-  if (/* 异步操作成功 */){
-    resolve(value);
-  } else {
-    reject(error);
-  }
-});
 ```
 
 ## NodeJS模块

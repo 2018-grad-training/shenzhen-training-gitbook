@@ -1,6 +1,6 @@
 # Spring 工作原理
 
-![](/assets/spring_high_level.png)x
+![](/assets/spring_high_level.png)
 
 # Configuration Metadata
 
@@ -132,9 +132,10 @@ public class AppConfig {
 
 ```java
 public class SimpleMovieLister {
+    
     private MovieFinder movieFinder;
 
-    @Authwired
+    @Autowired
     public SimpleMovieLister(MovieFinder movieFinder) {
         this.movieFinder = movieFinder;
     }
@@ -146,7 +147,7 @@ public class SimpleMovieLister {
 ```java
 public class SimpleMovieLister {
 
-    @Authwired
+    @Autowired
     private MovieFinder movieFinder;
 
     public void setMovieFinder(MovieFinder movieFinder) {

@@ -24,7 +24,34 @@
 
 **对象**
 
-只有对象！！！
+只有对象！！！一个基于原型的面向对象语言，没有类，只有对象。
+
+- **类意味着复制**
+    
+    传统的类被实例化时，它的行为会被复制到实例中。类被继承时，行为也会被复制到子类中。
+    多态看起来似乎是从子类引用父类，但是本质上引用的其实是复制的结果。
+- **对象之间的关系不是复制而是委托**
+
+#### 原型链
+JavaScript 中的对象有一个特殊的[[Prototype]] 内置属性，其实就是对于其他对象的引用。
+```javascript
+var employee = {
+  name: "Jane"
+};
+employee.name;
+```
+试图引用对象的属性时会触发原型[[Get]] 操作。
+
+```javascript
+var employee = {
+  name: "Jane"
+};
+var manager = Object.create( employee );
+manager.name;
+```
+对于默认的[[Get]] 操作来说，如果无法在对象本身找到需要的属性，就会继续访问对象的[[Prototype]] 链。
+
+**构造函数**
 
 可以使用 new 操作符和构造函数来创建一个新对象。
 
@@ -82,13 +109,17 @@ class Employee {
     this.name = name;
   }
   work() {
-    // ...
+    console.log("Employee work");
   }
 }
 class Manager extends Employee {
   constructor(name) {
     super(name);
     this.reports = [];
+  }
+  
+  work() {
+    console.log("Manager work");
   }
 }
 const manager = new Manager("Lucy");
@@ -105,6 +136,9 @@ class C {
     console.log( "Hello: " + this.count );
   }
 }
+C.prototype.count = 0;
+var c1 = new C();
+var c2 = new C();
 ```
 
 

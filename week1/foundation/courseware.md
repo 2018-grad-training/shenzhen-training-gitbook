@@ -2,7 +2,7 @@
 
 ### 什么是JavaScript？
 
-JavaScript 是一门跨平台、面向对象的轻量级脚本语言，它也是一门动态编程语言。
+JavaScript 是一门跨平台、面向对象的轻量级**脚本语言**，它也是一门**动态编程语言**。
 
 ### 为什么使用JavaScript？
 
@@ -66,7 +66,7 @@ JavaScript 是一门跨平台、面向对象的轻量级脚本语言，它也是
   * debugger;
   * 浏览器内置的调试器
 
-## Javascript语法和类型
+## Javascript类型
 
 Javascript中值是有类型的，变量是没有类型的。
 
@@ -80,8 +80,6 @@ Javascript中值是有类型的，变量是没有类型的。
 
 ### 内置对象类型
 
-https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
-
 Javascript中除了原型数据类型，其他所有值都是对象。原型数据类型是不可变的，Javascript中的对象是可变的键控集合。
 
 * Function 
@@ -92,6 +90,8 @@ Javascript中除了原型数据类型，其他所有值都是对象。原型数�
 * Boolean对象
 
 JS提供的对象方法绑定在prototype上，ES6对prototype方法进行了扩展。
+
+https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects
 
 #### Object
 
@@ -279,8 +279,9 @@ var p = new Person();
 function Person(){
   this.age = 0;
 
-  setInterval(() => {
+  setTimeout(() => {
     this.age++;
+    console.log(this.age);
   }, 1000);
 }
 

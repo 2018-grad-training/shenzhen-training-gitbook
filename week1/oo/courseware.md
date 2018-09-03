@@ -22,9 +22,35 @@
 
 ### 基于原型的面向对象语言
 
-**对象**
+#### 原型链
+```javascript
+var emptyObject = {
+  
+};
+```
+JavaScript 中的对象有一个特殊的[[Prototype]] 内置属性，其实就是对于其他对象的引用。
+```javascript
+var myObject = {
+  a: 1
+};
+myObject.a;
+```
+试图引用对象的属性时会触发原型[[Get]] 操作。
 
-只有对象！！！一个基于原型的面向对象语言，没有类，只有对象。
+```javascript
+var anotherObject = {
+  a: 2
+};
+var myObject = Object.create( anotherObject );
+myObject.a;
+```
+对于默认的[[Get]] 操作来说，如果无法在对象本身找到需要的属性，就会继续访问对象的[[Prototype]] 链。
+
+所有普通的[[Prototype]] 链最终都会指向内置的Object.prototype
+
+#### 对象
+
+一个基于原型的面向对象语言，没有类，**只有对象**。
 
 - **类意味着复制**
     
@@ -32,32 +58,20 @@
     多态看起来似乎是从子类引用父类，但是本质上引用的其实是复制的结果。
 - **对象之间的关系不是复制而是委托**
 
-#### 原型链
-JavaScript 中的对象有一个特殊的[[Prototype]] 内置属性，其实就是对于其他对象的引用。
+##### 创建对象
+- 对象字面量
+- Object.create()
 ```javascript
-var employee = {
-  name: "Jane"
+Object.create =  function (o) {
+    var F = function () {};
+    F.prototype = o;
+    return new F();
 };
-employee.name;
 ```
-试图引用对象的属性时会触发原型[[Get]] 操作。
-
-```javascript
-var employee = {
-  name: "Jane"
-};
-var manager = Object.create( employee );
-manager.name;
-```
-对于默认的[[Get]] 操作来说，如果无法在对象本身找到需要的属性，就会继续访问对象的[[Prototype]] 链。
-
-**构造函数**
-
-可以使用 new 操作符和构造函数来创建一个新对象。
-
+- new和构造函数
 ```javascript
 function Employee(name) {
-  this.name = name;
+    this.name = name;
 }
 const employee = new Employee("Jane");
 ```

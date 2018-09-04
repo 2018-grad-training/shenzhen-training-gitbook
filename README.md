@@ -1,4 +1,2 @@
-MVC
 
-![](/assets/mvc.png)
 

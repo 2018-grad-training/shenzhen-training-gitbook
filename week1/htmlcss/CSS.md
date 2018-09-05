@@ -16,29 +16,25 @@ Web浏览器将CSS规则应用于文档以影响它们的显示方式。它分�
 浏览器如何处理**script**？
 ![浏览器处理脚本工作原理](/images/scripted-browser-parsing-engine.jpg)
 
-#### DOM树
+#### CSS如何应用到HTML上？
+HTML定义：
 ```html
 <p>
   Let's use:
   <span>Cascading</span>
 </p>
 ```
-DOM树:
-```text
-P
-├─ "Let's use:"
-├─ SPAN
-|  └─ "Cascading"
-```
 CSS定义：
 ```css
+p {
+  font-size: 14px;
+}
 span {
-  border: 1px solid black;
-  background-color: lime;
+  color: blue;
+  font-weight: bold;
 }
 ```
 
-#### CSS如何应用到HTML上？
 - 外部样式表
 - 内部样式表
 - 内联样式
@@ -69,14 +65,16 @@ span {
 #### 层叠
 1. 重要性 !important
 2. 专用性
+    
+    - 元素选择器具有很低的专用性
+    - 类选择器具有更高的专用性
+    - ID选择器有甚至更高的专用性
 3. 源代码次序
 
 #### 继承
+应用于某个元素的一些属性值将由该元素的子元素继承，而有些则不会。
 
 ### 盒模型
-**注意**:
-- 如果盒子的高度被设置为百分比长度，盒子总会采用盒子内容的高度。
-- 外边距塌陷（当两个盒子挨在一起时，二者之间的距离为两个挨着的外边距中最大的那个值）
 
 ## CSS版面
 
@@ -99,8 +97,6 @@ p {
 
 ### Flexbox
 
-### Grid
-
 ## CSS延伸
 
 ### CSS最佳实践
@@ -109,7 +105,11 @@ p {
 - 统一命名规范
 - 遵循单一职责原则
 
-### polyfill
+### 浏览器兼容
+- `-moz-` Firefox 
+- `-webkit-` Safari and Chrome
+- `-o-` Opera
+- `-ms-` Internet Explorer
 
 ### CSS预处理语言
 - Sass
@@ -123,3 +123,9 @@ section .primary-button {
     background-color: $color-primary;
 } 
 ```
+
+---------
+
+**CSS练习**
+
+`git fetch origin css`

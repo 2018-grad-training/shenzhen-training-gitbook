@@ -52,7 +52,7 @@
     * [DDD](week3/dddhe-wei-fu-wu-zi-zhi/ke-jian.md)
     * [微服务拆分](week3/dddhe-wei-fu-wu-zi-zhi/wei-fu-wu-zi-zhi.md)
   * [服务注册和发现](week3/fu-wu-zhu-ce-he-fa-xian.md)
-    * [Eureka & Consul](week3/fu-wu-zhu-ce-he-fa-xian/ke-jian.md)
+    * [Eureka](week3/fu-wu-zhu-ce-he-fa-xian/ke-jian.md)
     * [Feign client](week3/fu-wu-zhu-ce-he-fa-xian/feign-client.md)
   * [服务容错保护](week3/fu-wu-rong-cuo-bao-hu.md)
     * [容错保护](week3/fu-wu-rong-cuo-bao-hu/rong-cuo-bao-hu.md)

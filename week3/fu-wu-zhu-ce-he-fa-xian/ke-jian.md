@@ -12,7 +12,16 @@ Eureka
 
 ![](/assets/eureka.png)
 
-使用 
+使用
+
+gradle
+
+```
+dependencies {
+	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-server')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+```
 
 Eureka  Server
 

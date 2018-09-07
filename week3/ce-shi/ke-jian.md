@@ -4,7 +4,15 @@
 
 ### STUB & MOCK
 
+https://semaphoreci.com/community/tutorials/stubbing-and-mocking-with-mockito-2-and-junit
 
+### 测试原则
+
+* Fast
+* Isolated/independent
+* Repeatable
+* Self-validating
+* Thorough/Timely
 
 ### 单元测试
 

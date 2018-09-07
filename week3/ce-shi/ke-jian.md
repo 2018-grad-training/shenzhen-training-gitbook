@@ -2,6 +2,10 @@
 
 ![](/assets/test.png)
 
+### STUB & MOCK
+
+
+
 ### 单元测试
 
 mockMvc
@@ -114,7 +118,11 @@ public class DemoHelloWorldIntegrationTest {
 
 ### 契约测试
 
-![](/assets/contract-test.png)
+家里有个插座，买电器的时候需要考虑插头跟插座是能配对的，也就是说插座和插头之间需要有契约
+
+![](/assets/contract.png)
+
+因此，契约测试就是插座跟插头的配套性测试。
 
 #### 怎么订契约
 

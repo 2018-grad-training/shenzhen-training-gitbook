@@ -96,6 +96,9 @@ p {
 - 固定定位
 
 ### Flexbox
+布局的传统解决方案，基于盒状模型，依赖 display 属性 + position属性 + float属性
+
+**问题**：如何垂直居中一个块级子元素在一个未知高度的父元素中？
 
 ## CSS延伸
 
@@ -128,4 +131,5 @@ section .primary-button {
 
 **CSS练习**
 
+[HTML练习](https://github.com/2018-grad-training/tw-resume-htmlcss-base)
 `git fetch origin css`

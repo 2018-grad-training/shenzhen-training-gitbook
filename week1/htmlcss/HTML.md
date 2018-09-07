@@ -42,8 +42,6 @@ DOM树:
 
 #### 嵌套元素
 
-#### 空元素
-
 #### 块级元素和内联元素
 **块级元素**：在页面中以块的形式展现 —— 相对与其前面的内容它会出现在新的一行，其后的内容也会被挤到下一行展现
 
@@ -78,7 +76,7 @@ DOM树:
 
 `meta`: 元数据。指定包含关于页面内容的关键字，可能会让你的页面在搜索引擎的相关的搜索出现得更多(SEO)。
 
-**练习**：创建一个空页面，包含html文档和css，js文件的引用
+[HTML练习](https://github.com/2018-grad-training/tw-resume-htmlcss-base)
 
 ### HTML语义
 
@@ -92,7 +90,7 @@ https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_te
 #### HTML5
  
 ##### 新的HTML5元素
-- 新的语义元素： `<header>` `<footer>` `<article>` `<section>` 等
+- 新的语义元素： `<header>` `<footer>` `<article>` `<section>` `<aside>`等
 - 新Form元素属性：number, date, time, calendar, and range
 - 新的图形元素：`<svg>` 和 `<canvas>`
 - 新的多媒体元素：`<audio>`和 `<video>`
@@ -102,7 +100,3 @@ https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/HTML_te
 - HTML拖放
 - HTML Local Storage
 - HTML应用程序缓存
-
--------
-
-[HTML练习](https://github.com/2018-grad-training/tw-resume-htmlcss-base)

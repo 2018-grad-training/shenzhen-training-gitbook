@@ -1,3 +1,27 @@
+## 异步数据流
+**Stream**是一个不间断的按照时间顺序排列的event序列。它可以发出三样信号：值（value，对应于某些类型）、错误（error）和完成（completed）
+
+![Click事件数据流](/images/rxjs-click-event-stream.png)
+
+根据Stream发出的三种信号，那么我们就可以定义三个对应的执行函数异步的捕捉并处理这三种信号量。
+
+```text
+--a---b-c---d---X---|->
+```
+
+- 对Stream的“监听”叫做**订阅（subscribe）**
+- 这些执行函数就是**观察者（observers）**
+- Stream就是被观察的**主体（subject）**／**可观察序列（observable）**
+- Stream的转换通过**操作符**
+
+```text
+Stream1:   ---c----c--c----c------c-->
+           map(c becomes 1) 
+           ---1----1--1----1------1-->
+           scan(+)
+Stream2:   ---1----2--3----4------5-->
+```
+
 ## Rxjs入门
 
 RxJS库通过使用 observable 序列来编写**异步**和**基于事件**的程序。

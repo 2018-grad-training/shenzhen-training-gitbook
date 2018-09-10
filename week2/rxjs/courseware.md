@@ -12,7 +12,7 @@
 - 对Stream的“监听”叫做**订阅（subscribe）**
 - 这些执行函数就是**观察者（observers）**
 - Stream就是被观察的**主体（subject）**／**可观察序列（observable）**
-- Stream的转换通过**操作符**
+- Stream的转换方法叫做**操作符**
 
 ```text
 Stream1:   ---c----c--c----c------c-->

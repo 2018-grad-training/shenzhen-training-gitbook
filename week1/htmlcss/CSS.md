@@ -115,6 +115,7 @@ p {
 - `-ms-` Internet Explorer
 
 ### CSS预处理语言
+为 CSS 增加一些编程的的特性，例如模块化，嵌套，变量，函数和运算等。
 - Sass
 - Less
 - Stylus
@@ -122,9 +123,11 @@ p {
 ```scss
 $color-primary: #ff4466;
 
-section .primary-button {
+section {
+  .primary-button {
     background-color: $color-primary;
-} 
+  } 
+}
 ```
 
 ---------

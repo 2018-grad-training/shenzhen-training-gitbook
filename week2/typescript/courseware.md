@@ -43,7 +43,10 @@ https://github.com/2018-grad-training/tw-js-scaffold
 - null / undefined
 
 ### 接口interface
-TypeScript里，接口的作用就是为这些类型命名和为你的代码或第三方代码定义契约。
+TypeScript里，接口的作用
+- 为这些类型命名
+- 为代码或第三方代码定义契约
+
 ```typescript
 interface Point {
   color: string;

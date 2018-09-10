@@ -17,6 +17,8 @@
 
 **服务**：用来封装可重用的业务逻辑。
 
+https://www.instagram.com/
+
 ## Angular命令行工具
 ```
 npm install -g @angular/cli
@@ -35,7 +37,7 @@ npm install -g @angular/cli
 ## Angular核心概念
 
 ### 模块NgModule
-Angular 的基本构造块是 NgModule，它为组件提供了**编译的上下文环境**。NgModule 会把相关的代码收集到一些功能集中。
+Angular 的基本构造块是 NgModule，它为组件提供了**编译的上下文环境**。
 Angular 应用就是由一组 NgModule 定义出的。 应用至少会有一个用于引导应用的根模块，通常还会有很多特性模块。
 
 #### 根模块
@@ -60,22 +62,13 @@ export class AppModule { }
 
 创建一个特性模块： `ng generate module todo`
 
-#### Angular自定义模块
-```typescript
-import { BrowserModule } from '@angular/platform-browser';
-@NgModule({
-  imports: [ BrowserModule ],
-  ...
-});
-```
-
 ### 组件Component
 每个组件都会定义一个类，其中包含应用的数据和逻辑，并与一个 HTML 模板相关联，该模板定义了一个供目标环境下显示的视图。
 
-创建一个组件： `ng generate component list`
+创建一个组件： `ng generate component todo/list --module=todo`
 
 #### NgModule和组件
-NgModule 为其中的组件提供了一个编译上下文环境。模块总会有一个根组件，并在启动时创建它。
+NgModule 为其中的组件提供了一个编译上下文环境。
 
 模块可以包含任意数量的其它组件，这些组件可以通过路由器加载，也可以通过模板创建。那些属于这个 NgModule 的组件会共享同一个编译上下文环境。
 
@@ -94,15 +87,12 @@ NgModule 为其中的组件提供了一个编译上下文环境。模块总会�
 - 结构型指令 `*ngFor`, `*ngIf` ...
 - 属性型指令 `ngClass`, `ngStyle` ...
 
-练习：https://github.com/2018-grad-training/tw-basic-angular /template-syntax
+Angular在线编辑工具：https://codesandbox.io/s/angular
 
 #### 生命周期钩子
 组件的实例有一个生命周期：**新建**、**更新**和**销毁**。
 
 练习：https://github.com/2018-grad-training/tw-basic-angular /lifecycle
-
-题目：新建父组件Parent，和自组件ChildA，ChildB。Parent中属性sharedValue作为ChildA，ChildB共同的Input，Parent中属性valueA作为ChildA
-的输入。查看更新和销毁ChildA，ChildB时的生命周期Log。
 
 #### 组件交互
 - 父组件传递数据到子组件
@@ -116,12 +106,6 @@ NgModule 为其中的组件提供了一个编译上下文环境。模块总会�
 - 父组件和子组件通过服务来通讯
 
 练习：https://github.com/2018-grad-training/tw-basic-angular /component-interaction
-
-题目1：通过本地变量实现父组件与子组件的通信
-
-题目2：通过父组件调用实现父组件与子组件的通信
-
-题目3：通过服务实现父组件与子组件的通信
 
 ### 指令Directive
 
@@ -166,3 +150,5 @@ constructor (private logger: LoggerService) {}
 
 - 内置管道
 - 自定义管道
+
+作业: 

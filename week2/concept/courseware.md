@@ -8,16 +8,16 @@
 - 组件
 - 服务
 
+https://www.instagram.com/
+
 ### Angular应用的架构
 ![Angular应用架构](/images/angular-architechure.jpg)
 
-**模块**：用来将应用中不同部分组织成一个Angular框架可以理解的单元
+**模块**：就是一个容器，用于存放一些内聚的代码块，这些代码块专注于某个应用领域、某个工作流或一组紧密相关的功能
 
-**组件**：是Angular应用的基本构建块，可以把一个组件理解为一段带有业务逻辑和数据的HTML。
+**组件**：基本构成单元，可以把一个组件理解为一段带有业务逻辑和数据的HTML。
 
 **服务**：用来封装可重用的业务逻辑。
-
-https://www.instagram.com/
 
 ## Angular命令行工具
 ```
@@ -34,10 +34,12 @@ npm install -g @angular/cli
 
 生成Angular元素：`ng generate component [name]`
 
+https://github.com/angular/angular-cli/wiki
+
 ## Angular核心概念
 
 ### 模块NgModule
-Angular 的基本构造块是 NgModule，它为组件提供了**编译的上下文环境**。
+NgModule为组件提供了**编译的上下文环境**。
 Angular 应用就是由一组 NgModule 定义出的。 应用至少会有一个用于引导应用的根模块，通常还会有很多特性模块。
 
 #### 根模块
@@ -60,19 +62,22 @@ export class AppModule { }
 #### 特性模块
 根模块可以包含任意深度的层次化子模块（特性模块）。
 
-创建一个特性模块： `ng generate module todo`
+创建一个特性模块： `ng generate module photo`
+
+- exports —— 能在其它模块的组件模板中使用的可声明对象。
 
 ### 组件Component
 每个组件都会定义一个类，其中包含应用的数据和逻辑，并与一个 HTML 模板相关联，该模板定义了一个供目标环境下显示的视图。
 
-创建一个组件： `ng generate component todo/list --module=todo`
+创建一个组件： `ng generate component photo/list --module=photo`
 
 #### NgModule和组件
-NgModule 为其中的组件提供了一个编译上下文环境。
-
 模块可以包含任意数量的其它组件，这些组件可以通过路由器加载，也可以通过模板创建。那些属于这个 NgModule 的组件会共享同一个编译上下文环境。
 
 #### 模板语法
+
+Angular在线编辑工具：https://codesandbox.io/s/angular
+
 ##### 数据绑定
 ![数据绑定](/images/angular-data-binding.png)
 
@@ -83,14 +88,22 @@ NgModule 为其中的组件提供了一个编译上下文环境。
 
 ![双向绑定](/images/angular-component-databinding.png)
 
-##### 指令
-- 结构型指令 `*ngFor`, `*ngIf` ...
-- 属性型指令 `ngClass`, `ngStyle` ...
+##### 内置指令
+- **结构型指令**
+    
+    结构型指令的职责是 HTML 布局。 它们塑造或重塑 DOM 的结构，这通常是通过添加、移除和操纵它们所附加到的宿主元素来实现的。
+    
+    `*ngFor`, `*ngIf`, `ngSwitch` ...
+- **属性型指令** 
 
-Angular在线编辑工具：https://codesandbox.io/s/angular
+    属性型指令会监听和修改其它 HTML 元素或组件的行为、元素属性（Attribute）、DOM 属性（Property）
+    
+    `ngClass`, `ngStyle` ...
 
 #### 生命周期钩子
-组件的实例有一个生命周期：**新建**、**更新**和**销毁**。
+组件的实例都有一个生命周期：**新建**、**更新**和**销毁**。
+
+Angular 提供了生命周期钩子。定义过的钩子方法可以被 Angular 调用。
 
 练习：https://github.com/2018-grad-training/tw-basic-angular /lifecycle
 
@@ -122,8 +135,8 @@ Angular在线编辑工具：https://codesandbox.io/s/angular
 创建一个服务：`ng generate service alert`
 
 #### 依赖注入
-Angular 会在启动过程中为你创建全应用级**注入器**。在应用中要用到的任何类都必须使用该应用的注入器注册一个**提供商**，以便注入器可以使用它来创建新实例。
-当创建组件类的新实例后，我们就可以通过该组件类的**构造函数**来访问该服务。
+Angular 会在启动过程中为你创建全应用级**注入器**。在应用中要用到注入器注册一个**提供商**，来创建新实例。
+然后我们就可以通过该组件类的**构造函数**来访问该服务。
 
 ![依赖注入](/images/angular-injector-injects.png)
 
@@ -135,7 +148,7 @@ export class LoggerService {}
 2. 通过提供商提供服务
 ```typescript
 @Component({
-  providers:  [ LoggerService ]
+    providers:  [ LoggerService ]
 })
 ```
 3. 通过构造函数访问该服务
@@ -149,6 +162,6 @@ constructor (private logger: LoggerService) {}
 管道把数据作为输入，然后转换它，给出期望的输出
 
 - 内置管道
-- 自定义管道
 
-作业: 
+    https://angular.cn/api?type=pipe
+- 自定义管道

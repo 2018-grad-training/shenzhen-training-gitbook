@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Week1](week1/README.md)
+* Week1
   * [Javascript基础](week1/foundation/README.md)
     * [课件](week1/foundation/courseware.md)
   * [Javascript OO](week1/oo/README.md)
@@ -12,7 +12,7 @@
   * [HTML+CSS](week1/htmlcss/README.md)
     * [HTML](week1/htmlcss/HTML.md)
     * [CSS](week1/htmlcss/CSS.md)
-* [Week2](week2/README.md)
+* Week2
   * [Typescript](week2/typescript/README.md)
     * [课件](week2/typescript/courseware.md)
   * [Angular核心概念](week2/concept/README.md)

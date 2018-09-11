@@ -1,6 +1,5 @@
 # Summary
 
-* [Introduction](README.md)
 * Week1
   * [Javascript基础](week1/foundation/README.md)
     * [课件](week1/foundation/courseware.md)

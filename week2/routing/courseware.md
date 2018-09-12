@@ -49,8 +49,6 @@ linkToIndex() {
 #### 获取路由参数
 
 ##### ActivatedRoute
-通常在 ngOnInit 方法中，用 ActivatedRoute 服务来接收路由的参数
-
 ```typescript
 constructor(private route: ActivatedRoute) {}
 ngOnInit() {
@@ -60,13 +58,7 @@ ngOnInit() {
   );
 }
 ```
-**为什么路由参数是可观察对象Observable？**
-默认情况下，如果没有访问过其它组件就导航到了同一个组件实例，那么路由器倾向于复用组件实例。如果复用，这些路由参数在该组件的生存期内可能会变化。
-
-switchMap在每次发出新请求时，会取消前一个内部observable的订阅。
-
 ##### Snapshot快照
-不需要 Observable 时，可采用Snapshot来访问路由参数的初始值。
 ```typescript
 ngOnInit() {
   console.log(this.route.snapshot.paramMap.get('id'));
@@ -76,7 +68,17 @@ ngOnInit() {
 ## 特性模块路由
 - 根模块 AppRoutingModule 中，调用 RouterModule.forRoot注册应用的顶级路由
 - 在特性模块中，调用RouterModule.forChild方法来注册附属路由。
-
+```typescript
+const routes: Routes = [{
+    path: 'index',
+    component: IndexComponent
+}];
+@NgModule({
+    imports: [ RouterModule.forChild(routes)],
+    exports: [ RouterModule ]
+})
+export class FeatureRoutingModule { }
+```
 ```typescript
 @NgModule({
   imports: [

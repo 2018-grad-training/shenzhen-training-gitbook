@@ -96,9 +96,12 @@ var observer = {
 ### Subscription
 Subscription 基本上只有一个 unsubscribe() 函数，这个函数用来释放资源或去取消 Observable 执行。
 
-## Operators
+### Operators
 操作符是 Observable 类型上的方法，比如 .map(...)、.filter(...)、.merge(...)，等等。
 当操作符被调用时，它们不会改变已经存在的 Observable 实例。相反，它们返回一个新的 Observable ，它的 subscription 逻辑基于第一个 Observable 。
+
+## Subject
+是一种特殊类型的 Observable，它允许将值多播给多个观察者
 
 ## Rxjs处理请求
 创建responseObservable

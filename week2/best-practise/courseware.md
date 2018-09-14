@@ -4,6 +4,7 @@
 - 单一职责
 - 命名
 - 编程约定
+- 层次化注入服务
 
 ## 应用程序结构
 ```
@@ -37,10 +38,3 @@
     - CoreModule 提供了一个或多个单例服务。Angular 使用应用的根注入器注册这些服务提供商，让每个服务的这个单例对象对所有需要它们的组件都是可用的
     - 避免在 AppModule 之外的任何地方导入 CoreModule。
     
-## 层次化注入服务
-- root
-- 特性模块
-- 组件
-- 子组件
-
-练习：https://github.com/2018-grad-training/tw-basic-angular /service-injection

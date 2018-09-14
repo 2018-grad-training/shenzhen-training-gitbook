@@ -3,7 +3,7 @@ Angular 的路由器能让用户从一个视图导航到另一个视图。Angula
 ```html
 <base href="/">
 ```
-浏览器会用 <base href> 的值作为相对URL 的前缀，当前引用的CSS 文件、脚本和图片也是基于这个相对URL。
+浏览器会用 `<base href>` 的值作为相对URL 的前缀，当前引用的CSS 文件、脚本和图片也是基于这个相对URL。
 
 ## 路由注册
 ### 配置路由
@@ -44,24 +44,6 @@ export class AppModule { }
 constructor( private router: Router) { }
 linkToIndex() {
   this.router.navigate(['/index']);
-}
-```
-#### 获取路由参数
-
-##### ActivatedRoute
-```typescript
-constructor(private route: ActivatedRoute) {}
-ngOnInit() {
-  this.route.paramMap.pipe(
-    switchMap((params: ParamMap) =>
-      console.log(params.get('id')))
-  );
-}
-```
-##### Snapshot快照
-```typescript
-ngOnInit() {
-  console.log(this.route.snapshot.paramMap.get('id'));
 }
 ```
 

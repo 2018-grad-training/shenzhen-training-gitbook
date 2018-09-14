@@ -25,9 +25,9 @@ RxJS库通过使用 observable 序列来编写**异步**和**基于事件**的�
 
 **Observer (观察者)**: 一个回调函数的集合，它知道如何去监听由 Observable 提供的值。
 
-**Operators (操作符)**: 使用像 map、filter、concat、flatMap 等这样的数组操作符，把异步事件作为集合来处理。
-
 **Subscription (订阅)**: 表示 Observable 的执行／"监听"，主要用于取消 Observable 的执行。
+
+**Operators (操作符)**: 使用像 map、filter、concat、flatMap 等这样的数组操作符，把异步事件作为集合来处理。
 
 ```typescript
 var button = document.querySelector('button');
@@ -50,12 +50,12 @@ observable.subscribe(observer);
 Observables 是多个值的惰性推送集合。
 
 ```javascript
-var observable = Rx.Observable.create(function (observer) {
-  observer.next(1);
-  observer.next(2);
+var observable = Rx.Observable.create(function (x) {
+  x.next(1);
+  x.next(2);
   setTimeout(() => {
-    observer.next(4);
-    observer.complete();
+    x.next(4);
+    x.complete();
   }, 1000);
 });
 ```

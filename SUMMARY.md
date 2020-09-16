@@ -23,6 +23,8 @@
     * [课件](week2/test/courseware.md)
   * [Angular路由](week2/routing/README.md)
     * [课件](week2/routing/courseware.md)
+  * [Angular国际化](week2/i18n/README.md)
+    * [课件](week2/i18n/courseware.md)
   * [Angular最佳实践](week2/best-practise/README.md)
     * [课件](week2/best-practise/courseware.md)
 * [Week3-4\*](week3/README.md)
